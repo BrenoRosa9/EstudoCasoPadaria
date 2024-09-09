@@ -1,0 +1,42 @@
+﻿@page
+@model WebPadaria.Pages.Produtos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto[0].Nome_Produto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto[0].Valor_Produto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Produto) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome_Produto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor_Produto)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id_Produto">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id_Produto">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id_Produto">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
