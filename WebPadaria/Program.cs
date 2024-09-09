@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Localization;
+using System.Globalization;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using WebPadaria.Data;
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,15 @@ builder.Services.AddDbContext<Bd_padaria>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Bd_padaria") ?? throw new InvalidOperationException("Connection string 'Bd_padaria' not found.")));
 
 var app = builder.Build();
+
+var defaultCulture = new CultureInfo("en-US");
+var localizationOptions = new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture(defaultCulture),
+    SupportedCultures = new List<CultureInfo> { defaultCulture },
+    SupportedUICultures = new List<CultureInfo> { defaultCulture }
+};
+app.UseRequestLocalization(localizationOptions);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

@@ -7,8 +7,6 @@ namespace WebPadaria.Models
         [Key]
         public int Id_Produto { get; set; }
         public string Nome_Produto { get; set; }
-
-        [DisplayFormat(DataFormatString = "{0:F2}")]
-        public float Valor_Produto { get; set; }
+        public decimal Valor_Produto { get; set; }
     }
 }
