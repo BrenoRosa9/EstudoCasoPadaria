@@ -21,16 +21,16 @@ namespace EstudoCasoPadaria
             }
         }
 
-        public Cliente(string nome, string cpf)
+        public Cliente(string nome, string cpf, string email)
         {
-            this.Nome = Nome;
-            this.Email = Email;
-            this.Cpf = Cpf;
+            this.Nome = nome;
+            this.Cpf = cpf;
+            this.Email = email;
         }
 
         public void AdicionarCliente()
         {
-            Console.WriteLine($"Cliente: {Nome}, CPF: {Cpf}, Email:{Email}  ");
+            Console.WriteLine($"Cliente: {Nome}, CPF: {Cpf}, Email: {Email}");
         }
     }
 }

@@ -18,8 +18,8 @@ namespace EstudoCasoPadaria
                 Produto queijo = new Produto("Queijo", 150.00m);
 
                 //Implementando clientes 1 e 2, 3 não é cadastrado
-                Fidelidade clienteFidelidade = new Fidelidade("João", "12345678901");
-                Fidelidade clienteFidelidade1 = new Fidelidade("Pedro", "00000000000");
+                Fidelidade clienteFidelidade = new Fidelidade("João", "12345678901", "Carlo");
+                Fidelidade clienteFidelidade1 = new Fidelidade("Pedro", "12345678901", "Carlos");
 
                 //Compra de clientes cadastrados e geração do cupom
                 VendaComum venda = new VendaComum(pao, "Dinheiro", 5, 1, clienteFidelidade);

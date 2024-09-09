@@ -10,7 +10,7 @@ namespace EstudoCasoPadaria
     {
         public int Pontuacao { get; private set; }
 
-        public Fidelidade(string nome, string cpf) : base(nome, cpf)
+        public Fidelidade(string nome, string cpf, string email) : base(nome, cpf, email)
         {
             Pontuacao = 0;
         }

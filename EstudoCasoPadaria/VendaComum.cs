@@ -31,7 +31,7 @@ namespace EstudoCasoPadaria
 
             if (Cliente != null)
             {
-                cupom += $", Cliente: {Cliente.nome}, CPF: {Cliente.cpf}";
+                cupom += $", Cliente: {Cliente.Nome}, CPF: {Cliente.Cpf}, Email{Cliente.Email}";
             }
 
             return cupom;
