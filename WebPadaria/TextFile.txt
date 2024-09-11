@@ -1,0 +1,15 @@
+﻿CREATE TABLE [dbo].[Cliente] (
+    [Id]    INT          IDENTITY (1, 1) NOT NULL,
+    [Cpf]   VARCHAR (50) NULL,
+    [Nome]  VARCHAR (50) NULL,
+    [Email] VARCHAR (50) NULL,
+    [Fone]  VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+CREATE TABLE [dbo].[Produto] (
+    [Id_Produto]    INT            IDENTITY (1, 1) NOT NULL,
+    [Nome_Produto]  VARCHAR (50)   NULL,
+    [Valor_Produto] DECIMAL (6, 2) NULL,
+    PRIMARY KEY CLUSTERED ([Id_Produto] ASC)
+);
