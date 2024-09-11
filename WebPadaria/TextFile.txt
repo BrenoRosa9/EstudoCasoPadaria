@@ -13,3 +13,8 @@ CREATE TABLE [dbo].[Produto] (
     [Valor_Produto] DECIMAL (6, 2) NULL,
     PRIMARY KEY CLUSTERED ([Id_Produto] ASC)
 );
+CREATE TABLE [dbo].[Cupom]
+(
+	[Id_Cupom] INT          IDENTITY (1, 1) NOT NULL,
+	PRIMARY KEY CLUSTERED ([Id_Cupom] ASC)
+)
