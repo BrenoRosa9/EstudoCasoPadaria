@@ -16,5 +16,6 @@ namespace WebPadaria.Data
 
         public DbSet<WebPadaria.Models.Cliente> Cliente { get; set; } = default!;
         public DbSet<WebPadaria.Models.Produto> Produto { get; set; } = default!;
+        public DbSet<WebPadaria.Models.Compra> Compra { get; set; } = default!;
     }
 }

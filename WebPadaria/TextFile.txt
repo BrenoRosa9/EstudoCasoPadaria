@@ -7,14 +7,29 @@
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
+
+
+
 CREATE TABLE [dbo].[Produto] (
     [Id_Produto]    INT            IDENTITY (1, 1) NOT NULL,
     [Nome_Produto]  VARCHAR (50)   NULL,
     [Valor_Produto] DECIMAL (6, 2) NULL,
     PRIMARY KEY CLUSTERED ([Id_Produto] ASC)
 );
-CREATE TABLE [dbo].[Cupom]
-(
-	[Id_Cupom] INT          IDENTITY (1, 1) NOT NULL,
-	PRIMARY KEY CLUSTERED ([Id_Cupom] ASC)
-)
+
+
+
+CREATE TABLE [dbo].[Compra] (
+    [Id_Compra] INT IDENTITY (1, 1) NOT NULL,
+	[Cliente_Id] INT  NOT NULL,
+	[Produto_Id] int NOT NULL,
+	[Valor_Total] DECIMAL(10,2) NULL,
+    PRIMARY KEY CLUSTERED ([Id_Compra] ASC),
+
+	CONSTRAINT Fk_Compra_Cliente FOREIGN KEY ([Cliente_Id])
+		References [dbo].[Cliente] ([Id]),
+	CONSTRAINT Fk_Compra_Produto FOREIGN KEY (Produto_Id)
+		References [dbo].Produto ([Id_Produto]),
+);
+
+
