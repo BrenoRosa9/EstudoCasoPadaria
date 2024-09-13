@@ -6,6 +6,7 @@ namespace WebPadaria.Models
     {
         [Key]
         public int Id_Compra { get; set; }
+        public int Cliente_Id { get; set; }
         public decimal Valor_Total { get; set; }
     }
 }
