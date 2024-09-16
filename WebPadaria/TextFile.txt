@@ -1,9 +1,10 @@
 ﻿CREATE TABLE [dbo].[Cliente] (
-    [Id]    INT          IDENTITY (1, 1) NOT NULL,
-    [Cpf]   VARCHAR (50) NULL,
-    [Nome]  VARCHAR (50) NULL,
-    [Email] VARCHAR (50) NULL,
-    [Fone]  VARCHAR (50) NULL,
+    [Id]        INT          IDENTITY (1, 1) NOT NULL,
+    [Cpf]       VARCHAR (50) NULL,
+    [Nome]      VARCHAR (50) NULL,
+    [Email]     VARCHAR (50) NULL,
+    [Fone]      VARCHAR (50) NULL,
+    [Pontuacao] VARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
