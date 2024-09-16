@@ -25,7 +25,7 @@ namespace WebPadaria.Pages.Produtos
         }
 
         [BindProperty]
-        public Cliente Cliente { get; set; } = default!;
+        public Produto Produto { get; set; } = default!;
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
@@ -35,7 +35,7 @@ namespace WebPadaria.Pages.Produtos
                 return Page();
             }
 
-            _context.Cliente.Add(Cliente);
+            _context.Produto.Add(Produto);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

@@ -35,6 +35,11 @@
                 <span asp-validation-for="Cliente.Fone" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Cliente.Pontuacao" class="control-label"></label>
+                <input asp-for="Cliente.Pontuacao" class="form-control" />
+                <span asp-validation-for="Cliente.Pontuacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>

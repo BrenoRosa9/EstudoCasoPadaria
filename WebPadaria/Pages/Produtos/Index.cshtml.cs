@@ -19,11 +19,11 @@ namespace WebPadaria.Pages.Produtos
             _context = context;
         }
 
-        public IList<Cliente> Cliente { get;set; } = default!;
+        public IList<Produto> Produto { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            Cliente = await _context.Cliente.ToListAsync();
+            Produto = await _context.Produto.ToListAsync();
         }
     }
 }

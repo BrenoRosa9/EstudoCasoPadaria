@@ -20,7 +20,7 @@ namespace WebPadaria.Pages.Produtos
         }
 
         [BindProperty]
-        public Cliente Cliente { get; set; } = default!;
+        public Produto Produto { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,15 +29,15 @@ namespace WebPadaria.Pages.Produtos
                 return NotFound();
             }
 
-            var cliente = await _context.Cliente.FirstOrDefaultAsync(m => m.Id == id);
+            var produto = await _context.Produto.FirstOrDefaultAsync(m => m.Id_Produto == id);
 
-            if (cliente == null)
+            if (produto == null)
             {
                 return NotFound();
             }
             else
             {
-                Cliente = cliente;
+                Produto = produto;
             }
             return Page();
         }
@@ -49,11 +49,11 @@ namespace WebPadaria.Pages.Produtos
                 return NotFound();
             }
 
-            var cliente = await _context.Cliente.FindAsync(id);
-            if (cliente != null)
+            var produto = await _context.Produto.FindAsync(id);
+            if (produto != null)
             {
-                Cliente = cliente;
-                _context.Cliente.Remove(Cliente);
+                Produto = produto;
+                _context.Produto.Remove(Produto);
                 await _context.SaveChangesAsync();
             }
 

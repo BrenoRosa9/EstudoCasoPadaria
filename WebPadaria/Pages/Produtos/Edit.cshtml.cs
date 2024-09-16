@@ -21,7 +21,7 @@ namespace WebPadaria.Pages.Produtos
         }
 
         [BindProperty]
-        public Cliente Cliente { get; set; } = default!;
+        public Produto Produto { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,12 +30,12 @@ namespace WebPadaria.Pages.Produtos
                 return NotFound();
             }
 
-            var cliente =  await _context.Cliente.FirstOrDefaultAsync(m => m.Id == id);
-            if (cliente == null)
+            var produto =  await _context.Produto.FirstOrDefaultAsync(m => m.Id_Produto == id);
+            if (produto == null)
             {
                 return NotFound();
             }
-            Cliente = cliente;
+            Produto = produto;
             return Page();
         }
 
@@ -48,7 +48,7 @@ namespace WebPadaria.Pages.Produtos
                 return Page();
             }
 
-            _context.Attach(Cliente).State = EntityState.Modified;
+            _context.Attach(Produto).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +56,7 @@ namespace WebPadaria.Pages.Produtos
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ClienteExists(Cliente.Id))
+                if (!ProdutoExists(Produto.Id_Produto))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace WebPadaria.Pages.Produtos
             return RedirectToPage("./Index");
         }
 
-        private bool ClienteExists(int id)
+        private bool ProdutoExists(int id)
         {
-            return _context.Cliente.Any(e => e.Id == id);
+            return _context.Produto.Any(e => e.Id_Produto == id);
         }
     }
 }
