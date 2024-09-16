@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using WebPadaria.Controller.Data;
 using WebPadaria.Models;
 
-namespace WebPadaria.Pages.Produtos
+namespace WebPadaria.Pages.Compras
 {
     public class IndexModel : PageModel
     {
@@ -19,11 +19,11 @@ namespace WebPadaria.Pages.Produtos
             _context = context;
         }
 
-        public IList<Produto> Produto { get;set; } = default!;
+        public IList<Compra> Compra { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            Produto = await _context.Produto.ToListAsync();
+            Compra = await _context.Compra.ToListAsync();
         }
     }
 }

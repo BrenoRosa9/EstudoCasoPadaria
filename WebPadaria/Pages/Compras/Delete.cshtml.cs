@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using WebPadaria.Controller.Data;
 using WebPadaria.Models;
 
-namespace WebPadaria.Pages.Produtos
+namespace WebPadaria.Pages.Compras
 {
     public class DeleteModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace WebPadaria.Pages.Produtos
         }
 
         [BindProperty]
-        public Produto Produto { get; set; } = default!;
+        public Compra Compra { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,15 +29,15 @@ namespace WebPadaria.Pages.Produtos
                 return NotFound();
             }
 
-            var produto = await _context.Produto.FirstOrDefaultAsync(m => m.Id_Produto == id);
+            var compra = await _context.Compra.FirstOrDefaultAsync(m => m.Id_Compra == id);
 
-            if (produto == null)
+            if (compra == null)
             {
                 return NotFound();
             }
             else
             {
-                Produto = produto;
+                Compra = compra;
             }
             return Page();
         }
@@ -49,11 +49,11 @@ namespace WebPadaria.Pages.Produtos
                 return NotFound();
             }
 
-            var produto = await _context.Produto.FindAsync(id);
-            if (produto != null)
+            var compra = await _context.Compra.FindAsync(id);
+            if (compra != null)
             {
-                Produto = produto;
-                _context.Produto.Remove(Produto);
+                Compra = compra;
+                _context.Compra.Remove(Compra);
                 await _context.SaveChangesAsync();
             }
 

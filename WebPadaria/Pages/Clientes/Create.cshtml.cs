@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using WebPadaria.Data;
+using WebPadaria.Controller.Data;
 using WebPadaria.Models;
 
 namespace WebPadaria.Pages.Clientes
 {
     public class CreateModel : PageModel
     {
-        private readonly WebPadaria.Data.Bd_padaria _context;
+        private readonly Bd_padaria _context;
 
-        public CreateModel(WebPadaria.Data.Bd_padaria context)
+        public CreateModel(Bd_padaria context)
         {
             _context = context;
         }

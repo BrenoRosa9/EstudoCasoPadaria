@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using WebPadaria.Data;
+using WebPadaria.Controller.Data;
 using WebPadaria.Models;
 
 namespace WebPadaria.Pages.Clientes
 {
     public class IndexModel : PageModel
     {
-        private readonly WebPadaria.Data.Bd_padaria _context;
+        private readonly Bd_padaria _context;
 
-        public IndexModel(WebPadaria.Data.Bd_padaria context)
+        public IndexModel(Bd_padaria context)
         {
             _context = context;
         }

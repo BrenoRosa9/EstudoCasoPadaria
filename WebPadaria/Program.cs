@@ -2,7 +2,7 @@
 using System.Globalization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using WebPadaria.Data;
+using WebPadaria.Controller.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

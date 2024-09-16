@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using WebPadaria.Controller.Data;
 using WebPadaria.Models;
 
-namespace WebPadaria.Pages.Clientes
+namespace WebPadaria.Pages.Compras
 {
     public class DetailsModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace WebPadaria.Pages.Clientes
             _context = context;
         }
 
-        public Cliente Cliente { get; set; } = default!;
+        public Compra Compra { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,14 +28,14 @@ namespace WebPadaria.Pages.Clientes
                 return NotFound();
             }
 
-            var cliente = await _context.Cliente.FirstOrDefaultAsync(m => m.Id == id);
-            if (cliente == null)
+            var compra = await _context.Compra.FirstOrDefaultAsync(m => m.Id_Compra == id);
+            if (compra == null)
             {
                 return NotFound();
             }
             else
             {
-                Cliente = cliente;
+                Compra = compra;
             }
             return Page();
         }

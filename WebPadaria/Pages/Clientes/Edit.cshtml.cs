@@ -6,16 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using WebPadaria.Data;
+using WebPadaria.Controller.Data;
 using WebPadaria.Models;
 
 namespace WebPadaria.Pages.Clientes
 {
     public class EditModel : PageModel
     {
-        private readonly WebPadaria.Data.Bd_padaria _context;
+        private readonly Bd_padaria _context;
 
-        public EditModel(WebPadaria.Data.Bd_padaria context)
+        public EditModel(Bd_padaria context)
         {
             _context = context;
         }

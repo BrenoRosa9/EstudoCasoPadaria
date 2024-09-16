@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using WebPadaria.Controller.Data;
 using WebPadaria.Models;
 
-namespace WebPadaria.Pages.Produtos
+namespace WebPadaria.Pages.Compras
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace WebPadaria.Pages.Produtos
         }
 
         [BindProperty]
-        public Produto Produto { get; set; } = default!;
+        public Compra Compra { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,12 +30,12 @@ namespace WebPadaria.Pages.Produtos
                 return NotFound();
             }
 
-            var produto =  await _context.Produto.FirstOrDefaultAsync(m => m.Id_Produto == id);
-            if (produto == null)
+            var compra =  await _context.Compra.FirstOrDefaultAsync(m => m.Id_Compra == id);
+            if (compra == null)
             {
                 return NotFound();
             }
-            Produto = produto;
+            Compra = compra;
             return Page();
         }
 
@@ -48,7 +48,7 @@ namespace WebPadaria.Pages.Produtos
                 return Page();
             }
 
-            _context.Attach(Produto).State = EntityState.Modified;
+            _context.Attach(Compra).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +56,7 @@ namespace WebPadaria.Pages.Produtos
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProdutoExists(Produto.Id_Produto))
+                if (!CompraExists(Compra.Id_Compra))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace WebPadaria.Pages.Produtos
             return RedirectToPage("./Index");
         }
 
-        private bool ProdutoExists(int id)
+        private bool CompraExists(int id)
         {
-            return _context.Produto.Any(e => e.Id_Produto == id);
+            return _context.Compra.Any(e => e.Id_Compra == id);
         }
     }
 }
