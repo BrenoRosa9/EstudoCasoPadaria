@@ -12,9 +12,9 @@ namespace WebPadaria.Pages.Clientes
 {
     public class CreateModel : PageModel
     {
-        private readonly Bd_padaria _context;
+        private readonly WebPadaria.Controller.Data.Bd_padaria _context;
 
-        public CreateModel(Bd_padaria context)
+        public CreateModel(WebPadaria.Controller.Data.Bd_padaria context)
         {
             _context = context;
         }

@@ -12,9 +12,9 @@ namespace WebPadaria.Pages.Clientes
 {
     public class IndexModel : PageModel
     {
-        private readonly Bd_padaria _context;
+        private readonly WebPadaria.Controller.Data.Bd_padaria _context;
 
-        public IndexModel(Bd_padaria context)
+        public IndexModel(WebPadaria.Controller.Data.Bd_padaria context)
         {
             _context = context;
         }

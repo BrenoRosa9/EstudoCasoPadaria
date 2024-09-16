@@ -12,9 +12,9 @@ namespace WebPadaria.Pages.Clientes
 {
     public class DeleteModel : PageModel
     {
-        private readonly Bd_padaria _context;
+        private readonly WebPadaria.Controller.Data.Bd_padaria _context;
 
-        public DeleteModel(Bd_padaria context)
+        public DeleteModel(WebPadaria.Controller.Data.Bd_padaria context)
         {
             _context = context;
         }

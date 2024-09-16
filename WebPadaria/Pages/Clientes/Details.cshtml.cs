@@ -12,9 +12,9 @@ namespace WebPadaria.Pages.Clientes
 {
     public class DetailsModel : PageModel
     {
-        private readonly Bd_padaria _context;
+        private readonly WebPadaria.Controller.Data.Bd_padaria _context;
 
-        public DetailsModel(Bd_padaria context)
+        public DetailsModel(WebPadaria.Controller.Data.Bd_padaria context)
         {
             _context = context;
         }

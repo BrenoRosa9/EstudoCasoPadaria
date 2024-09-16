@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using WebPadaria.Controller.Data;
+using Microsoft.EntityFrameworkCore;
+using WebPadaria.Data;
 using WebPadaria.Models;
+using System.Linq;
+using System.Threading.Tasks;
+using WebPadaria.Controller.Data;
 
 namespace WebPadaria.Pages.Compras
 {
@@ -19,21 +19,31 @@ namespace WebPadaria.Pages.Compras
             _context = context;
         }
 
-        public IActionResult OnGet()
+        [BindProperty]
+        public Compra Compra { get; set; }
+        public SelectList Clientes { get; set; }
+        public SelectList Produtos { get; set; }
+
+        public async Task<IActionResult> OnGetAsync()
         {
+            Clientes = new SelectList(await _context.Cliente.ToListAsync(), "Id", "Nome");
+            Produtos = new SelectList(await _context.Produto.Select(p => new SelectListItem
+            {
+                Value = p.Id_Produto.ToString(),
+                Text = p.Nome_Produto
+            }).ToListAsync(), "Value", "Text");
             return Page();
         }
 
-        [BindProperty]
-        public Compra Compra { get; set; } = default!;
-
-        // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
+
+            var produto = await _context.Produto.FindAsync(Compra.Produto_Id);
+            Compra.Valor_Total = produto.Valor_Produto * Compra.Quantidade;
 
             _context.Compra.Add(Compra);
             await _context.SaveChangesAsync();

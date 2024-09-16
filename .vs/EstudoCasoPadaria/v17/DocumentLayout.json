@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\yutak\\OneDrive\\\u00C1rea de Trabalho\\Padaria\\EstudoCasoPadaria\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{18211C5C-3C2D-4A3B-99FE-0A2512225D59}|WebPadaria\\WebPadaria.csproj|c:\\users\\yutak\\onedrive\\\u00E1rea de trabalho\\padaria\\estudocasopadaria\\webpadaria\\pages\\compras\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18211C5C-3C2D-4A3B-99FE-0A2512225D59}|WebPadaria\\WebPadaria.csproj|solutionrelative:webpadaria\\pages\\compras\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18211C5C-3C2D-4A3B-99FE-0A2512225D59}|WebPadaria\\WebPadaria.csproj|c:\\users\\yutak\\onedrive\\\u00E1rea de trabalho\\padaria\\estudocasopadaria\\webpadaria\\pages\\compras\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18211C5C-3C2D-4A3B-99FE-0A2512225D59}|WebPadaria\\WebPadaria.csproj|solutionrelative:webpadaria\\pages\\compras\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18211C5C-3C2D-4A3B-99FE-0A2512225D59}|WebPadaria\\WebPadaria.csproj|c:\\users\\yutak\\onedrive\\\u00E1rea de trabalho\\padaria\\estudocasopadaria\\webpadaria\\models\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18211C5C-3C2D-4A3B-99FE-0A2512225D59}|WebPadaria\\WebPadaria.csproj|solutionrelative:webpadaria\\models\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\yutak\\OneDrive\\\u00C1rea de Trabalho\\Padaria\\EstudoCasoPadaria\\WebPadaria\\Pages\\Compras\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "WebPadaria\\Pages\\Compras\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\yutak\\OneDrive\\\u00C1rea de Trabalho\\Padaria\\EstudoCasoPadaria\\WebPadaria\\Pages\\Compras\\Create.cshtml.cs",
+              "RelativeToolTip": "WebPadaria\\Pages\\Compras\\Create.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T18:50:56.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Compra.cs",
+              "DocumentMoniker": "C:\\Users\\yutak\\OneDrive\\\u00C1rea de Trabalho\\Padaria\\EstudoCasoPadaria\\WebPadaria\\Models\\Compra.cs",
+              "RelativeDocumentMoniker": "WebPadaria\\Models\\Compra.cs",
+              "ToolTip": "C:\\Users\\yutak\\OneDrive\\\u00C1rea de Trabalho\\Padaria\\EstudoCasoPadaria\\WebPadaria\\Models\\Compra.cs",
+              "RelativeToolTip": "WebPadaria\\Models\\Compra.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T18:50:05.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\yutak\\OneDrive\\\u00C1rea de Trabalho\\Padaria\\EstudoCasoPadaria\\WebPadaria\\Pages\\Compras\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "WebPadaria\\Pages\\Compras\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\yutak\\OneDrive\\\u00C1rea de Trabalho\\Padaria\\EstudoCasoPadaria\\WebPadaria\\Pages\\Compras\\Index.cshtml.cs*",
+              "RelativeToolTip": "WebPadaria\\Pages\\Compras\\Index.cshtml.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T18:48:25.977Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

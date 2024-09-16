@@ -13,9 +13,9 @@ namespace WebPadaria.Pages.Clientes
 {
     public class EditModel : PageModel
     {
-        private readonly Bd_padaria _context;
+        private readonly WebPadaria.Controller.Data.Bd_padaria _context;
 
-        public EditModel(Bd_padaria context)
+        public EditModel(WebPadaria.Controller.Data.Bd_padaria context)
         {
             _context = context;
         }

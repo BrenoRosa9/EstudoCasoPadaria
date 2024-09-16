@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using WebPadaria.Controller.Data;
+using WebPadaria.Data;
 using WebPadaria.Models;
 
 namespace WebPadaria.Pages.Compras
@@ -19,11 +20,14 @@ namespace WebPadaria.Pages.Compras
             _context = context;
         }
 
-        public IList<Compra> Compra { get;set; } = default!;
+        public IList<Compra> Compras { get; set; } = default!;
 
         public async Task OnGetAsync()
         {
-            Compra = await _context.Compra.ToListAsync();
+            Compras = await _context.Compra
+                .Include(c => c.Cliente)
+                .Include(c => c.Produto)
+                .ToListAsync();
         }
     }
 }
